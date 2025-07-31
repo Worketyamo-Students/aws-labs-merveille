@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="flex flex-col gap-2 p-4 bg-[#000000]">
+    <div className="flex  flex-col gap-4 justify-center align-center  p-8 pt-8">
       <Navbar />
       <Section />
       <Footer/>
