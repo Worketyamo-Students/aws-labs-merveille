@@ -2,7 +2,8 @@
 import Input from '../sous-components/Input';
 import Barre from '../sous-components/Barre';
 import Ligne from '../sous-components/Ligne';
-import github from '../assets/public/udemy.svg'
+import github from '../assets/public/github-logo.svg'
+import google from '../assets/public/Google.svg'
 
 function Section() {
     return (
@@ -10,7 +11,8 @@ function Section() {
 
             {/* Section 1 : En-tête */}
             <section className="text-center">
-                <h1 className="text-2xl font-semibold mb-2">Création de compte</h1>
+                <h1 className="text-2xl font-semibold mb-2 md:hidden">Création de compte</h1>
+                <h1 className="text-2xl font-semibold mb-2 hidden md:block">Connexion</h1>
                 <h3 className="text-sm text-gray-600">
                     Rentrez vos infos pour créer votre compte.
                 </h3>
@@ -50,7 +52,7 @@ function Section() {
             </div>
 
             <div className='flex gap-1 justify-center items-center border-1 w-11/12 border-gray-300'>
-                <img src={github} alt="#"/>
+                <img src={google} alt="#"/>
                 <h4>Google</h4>
 
             </div>
