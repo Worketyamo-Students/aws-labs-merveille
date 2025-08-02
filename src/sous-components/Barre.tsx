@@ -1,9 +1,14 @@
+interface Props {
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-function Barre () {
+const Barre = ({ className = "", style }: Props) => {
   return (
-    <div className=" -mt-4 w-11/12 h-[7px] rounded-[20px] bg-gray-200">
-     
-    </div>
+    <div
+      className={`w-11/12 h-[7px] rounded-[20px] ${className}`}
+      style={style}
+    />
   );
 };
 
