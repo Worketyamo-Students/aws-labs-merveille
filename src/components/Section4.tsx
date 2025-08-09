@@ -3,7 +3,7 @@ import fille from "../assets/public/images 2.svg"
 
 function Section4() {
     return (
-        <div className="flex flex-col gap-6 items-center p-6 -mt-24">
+        <div className="flex flex-col gap-6 items-center p-6 ">
 
             {/* Section 1 : En-tête */}
             <section className="text-center">

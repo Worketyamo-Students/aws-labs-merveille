@@ -1,4 +1,4 @@
-// import React from 'react';
+//  import React from 'react';
 import Input from '../sous-components/Input';
 import Barre from '../sous-components/Barre';
 import Ligne from '../sous-components/Ligne';
@@ -34,8 +34,8 @@ function Section1() {
             <div className='flex gap-4 w-full'>
                 <Barre className='bg-blue-700'/>
                 <Barre />
-                <Barre />
-                <Barre />
+                <Barre  />
+                <Barre/>
             </div>
 
             <div className="flex items-center gap-2  w-full">

@@ -1,15 +1,28 @@
-interface Props {
+import { useNavigate } from 'react-router-dom';
+
+interface BarreProps {
   className?: string;
   style?: React.CSSProperties;
+  destination?: string;
+  active?: boolean;
+  activeColor?: string; // couleur si active
 }
 
-const Barre = ({ className = "", style }: Props) => {
+function Barre({ className = '', style = {}, destination, active = false, activeColor }: BarreProps) {
+  const navigate = useNavigate();
+
   return (
     <div
-      className={`w-11/12 h-[7px] rounded-[20px] ${className}`}
-      style={style}
+      onClick={() => destination && navigate(destination)}
+      className={`w-full h-2  rounded cursor-pointer transition-colors duration-300`}
+      style={{
+        background: active
+          ? activeColor || style.background || undefined
+          : '#d1d5db', 
+        ...(!active ? {} : style),
+      }}
     />
   );
-};
+}
 
 export default Barre;
