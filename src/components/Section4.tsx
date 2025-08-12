@@ -1,7 +1,14 @@
 
 import fille from "../assets/public/images 2.svg"
-
+import { useNavigate } from 'react-router-dom';
 function Section4() {
+    const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+
+          navigate('/account');
+  };
     return (
         <div className="flex flex-col gap-6 items-center p-6 ">
 
@@ -18,10 +25,13 @@ function Section4() {
             <img src={fille} alt="" className=""/>
            
 
-            <div className='flex gap-1 justify-center items-center bg-[#00539C] border-1 w-full h-10 text-[14.5px] rounded-[10px] text-white font-bold'>
+            <button 
+            type="button"
+            onClick={handleSubmit} 
+             className='flex gap-1 justify-center items-center bg-[#00539C] border-1 w-full h-10 text-[14.5px] rounded-[10px] text-white font-bold'>
             Creer le compte
 
-            </div>
+            </button>
             <p className='w-11/12 text-sm'>By clicking continue, you agree to our
             <span className="underline text-black">Terms of Service</span> and <span className="underline text-black">Privacy Policy.</span></p>
 

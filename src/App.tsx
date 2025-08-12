@@ -8,8 +8,10 @@ import Bord from './components/Bord'
 
 function App() {
   return (
-    <div className=" flex  p-8 md:m-2">
-      <Bord/>
+    <div className=" flex flex-row  h-auto md:pt-6   md:p-1 md:gap-6 lg:p-6 lg:mt-1 xl:mt-8 md:pl-12 lg:pl-24 lg:pr-24 lg:gap-10 ">
+      <div className="w-1/2 hidden md:block">
+        <Bord />
+      </div>
       <main className="flex-1 ">
         <Routes>
           {/* <Route path="/" element={<Navigate to="/account" />} />  redirection */}

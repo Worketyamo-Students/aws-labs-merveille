@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 interface BarreProps {
-  className?: string;
+  className?:string;
   style?: React.CSSProperties;
   destination?: string;
   active?: boolean;

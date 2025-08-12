@@ -1,11 +1,17 @@
-// import React from 'react'; // Pas nécessaire avec React 17+ et nouvelle transformation JSX
-import Input from '../sous-components/Input';
-// import Barre from '../sous-components/Barre'; // Attention : tu importes Barre et Ligne mais ne les utilises pas
-// import Ligne from '../sous-components/Ligne';
-// import github from '../assets/public/github-logo.svg';
-// import google from '../assets/public/Google.svg';
 
+import Input from '../sous-components/Input';
+
+import { useNavigate } from 'react-router-dom';
+
+   
 function Section3() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+
+          navigate('/bienvenue');
+  };
   return (
     <div className="flex flex-col gap-6 items-center p-6">
 
@@ -22,8 +28,9 @@ function Section3() {
       <section className="w-full max-w-md p-2 flex flex-col gap-3">
         <Input
           label="Numéro de téléphone"
-          type="text"           // "texte" → "text" (valeur correcte en HTML)
+          type="text"
           placeholder="Numéro WhatsApp"
+          
         />
         <Input
           label=""
@@ -44,8 +51,10 @@ function Section3() {
 
       {/* Bouton */}
       <button
+       type="button"
+       onClick={handleSubmit} 
         className="flex gap-1 justify-center items-center bg-[#00539C] w-full max-w-md h-10 text-[14.5px] rounded-[10px] text-white font-bold"
-        type="submit"
+       
       >
         Créer le compte
       </button>

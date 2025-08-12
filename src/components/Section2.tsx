@@ -1,6 +1,14 @@
-// import React from 'react';
 
+import { useNavigate } from 'react-router-dom';
 function Section2() {
+
+    const navigate = useNavigate();
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+       
+            navigate('/finalisation');
+    };
+    
     return (
         <div className="flex flex-col gap-6 items-center p-6">
 
@@ -21,10 +29,12 @@ function Section2() {
                 <div className="w-12 h-12  bg-gray-100 rounded-[5px] border-1 border-gray-200"></div>
             </section>
 
-            <div className='flex gap-1 justify-center items-center bg-[#00539C] border-1 w-full h-10 text-[14.5px] rounded-[10px] text-white font-bold'>
+            <button 
+            type="button"
+            onClick={handleSubmit} className='flex gap-1 justify-center items-center bg-[#00539C] border-1 w-full h-10 text-[14.5px] rounded-[10px] text-white font-bold'>
             Creer le compte
 
-            </div>
+            </button>
             <p className='w-11/12 text-sm'>By clicking continue, you agree to our
             <span className="underline text-black">Terms of Service</span> and <span className="underline text-black">Privacy Policy.</span></p>
             <p className="text-black text-sm pt-8 p-2 w-[300px] h-[186px]">

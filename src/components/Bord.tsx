@@ -5,7 +5,7 @@ import mail from "../assets/public/mail-01-stroke-rounded 1.png";
 import person22 from "../assets/public/add-team-stroke-rounded 1.png";
 import fusee from "../assets/public/rocket-stroke-rounded 1.svg";
 import fleche from "../assets/public/fleche.svg";
-
+const lineColor = "#8080808C";
 interface Step {
   icon: string;
   title: string;
@@ -47,17 +47,17 @@ function Bord() {
   const currentStepIndex = steps.findIndex((step) => step.path === location.pathname);
 
   return (
-    <section className="bg-[#00539C0A] hidden md:block">
-      <img src={logo3} alt="#" className="w-16 h-16 md:ml-16 lg:ml-24 -pt-8" />
+    <section className="bg-[#00539C0A] hidden md:block  ">
+      <img src={logo3} alt="#" className="w-16 h-16 md:ml-10 lg:ml-20 " />
 
       <div className="p-4">
         {steps.map((step, index) => {
-          const isActive = index <= currentStepIndex;
+          const isActive = index === currentStepIndex;
           const borderColor = isActive ? "#000000" : "#8080808C";
           const textColor = isActive ? "#000000" : "#8080808C";
 
           return (
-            <div key={step.title}>
+            <div key={step.title}>.
               <div className="flex gap-2">
                 <div
                   className="flex justify-center items-center rounded-[15px] w-[59px] h-[50px] border"
@@ -73,7 +73,7 @@ function Bord() {
               {index < steps.length - 1 && (
                 <div
                   className="h-20 ml-7 w-0.5 border"
-                  style={{ borderColor }}
+                  style={{ borderColor :lineColor }}
                 ></div>
               )}
             </div>
@@ -81,7 +81,7 @@ function Bord() {
         })}
       </div>
 
-      <div className="flex gap-2 p-4 mt-64">
+      <div className="flex gap-2 p-4 mt-12 md:mt-6 xl:mt-4">
         <img src={fleche} alt="#" className="w-[25px] h-[25px]" />
         <div className="flex w-full justify-between">
           <h1 className="text-[#00539C]">Vos details</h1>
